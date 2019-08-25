@@ -1,0 +1,7 @@
+<apex:page controller="MainPageController">
+<h1>Witaj na stronie</h1><br></br>
+<apex:form >
+<apex:commandbutton Value="Doktorzy" action="{!goToDoctorsList}" />
+<apex:commandbutton Value="Szpitale" action="{!goToHospitalsList}" />
+</apex:form>
+</apex:page>

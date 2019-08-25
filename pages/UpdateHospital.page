@@ -1,0 +1,21 @@
+<apex:page controller="HospitalDetailsController" docType="html-5.0">
+<h1>Modyfikuj szpital</h1>
+<apex:form >
+id: <apex:inputField type="number" html-step="any" Value="{!hospital.id__c}" /><br />
+nazwa: <apex:inputField type="text" html-step="any" Value="{!hospital.name__c}" /><br />
+państwo: <apex:inputField type="text" html-step="any" Value="{!hospital.country__c}" /><br />
+miejscowość: <apex:inputField type="text" html-step="any" Value="{!hospital.town__c}" /><br />
+ulica: <apex:inputField type="text" html-step="any" Value="{!hospital.street__c}" /><br />
+nr domu: <apex:inputField type="number" html-step="any" Value="{!hospital.streetNumber__c}" /><br />
+kod pocztowy: <apex:inputField type="text" html-step="any" Value="{!hospital.postalCode__c}" /><br />
+tel.1: <apex:inputField type="tel" html-step="any" Value="{!hospital.phoneNumber1__c}" /><br />
+tel.2: <apex:inputField type="tel" html-step="any" Value="{!hospital.phoneNumber2__c}" /><br />
+fax 1: <apex:inputField type="tel" html-step="any" Value="{!hospital.faxNumber1__c}" /><br />
+tex 2: <apex:inputField type="tel" html-step="any" Value="{!hospital.faxNumber2__c}" /><br />
+dyrektor: <apex:inputField type="text" html-step="any" Value="{!hospital.chiefOfMedicine__c}" /><br />
+repozytorium: <apex:inputField type="text" html-step="any" Value="{!hospital.salesRep__c}" /><br />
+czy szpital kliniczny? <apex:inputCheckbox Value="{!hospital.teachingHospital__c}" /><br />
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+<apex:commandbutton Value="Zapisz" action="{!updateHospital}" />
+</apex:form>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="AddNewDoctorController" docType="html-5.0">
+<h1>Utwórz nowego doktora</h1>
+<apex:form >
+id: <apex:input type="number" html-step="any" Value="{!id}" /><br />
+imię: <apex:input type="text" html-step="any" Value="{!name}" /><br />
+nazwisko: <apex:input type="text" html-step="any" Value="{!surname}" /><br/>
+tytuł: <apex:input type="text" html-step="any" Value="{!title}" /><br />
+nr licencji: <apex:input type="text" html-step="any" Value="{!licenseNumber}" /><br />
+stanowisko: <apex:input type="text" html-step="any" Value="{!position}" /><br />
+wydział: <apex:input type="text" html-step="any" Value="{!department}" /><br />
+czy kierownik? <apex:inputCheckbox Value="{!supervisor}" /><br>
+tel. służbowy: <apex:input type="tel" html-step="any" Value="{!workPhone}" /><br />
+tel. prywatny: <apex:input type="tel" html-step="any" Value="{!privatePhone}" /><br />
+email: <apex:input type="email" html-step="any" Value="{!email}" /><br />
+państwo: <apex:input type="text" html-step="any" Value="{!country}" /><br />
+miejscowość: <apex:input type="text" html-step="any" Value="{!town}" /><br />
+ulica: <apex:input type="text" html-step="any" Value="{!street}" /><br />
+nr domu: <apex:input type="number" html-step="any" Value="{!streetNumber}" /><br />
+nr mieszkania: <apex:input type="number" html-step="any" Value="{!houseNumber}" /><br />
+kod pocztowy: <apex:input type="text" html-step="any" Value="{!postalCode}" /><br />
+czy dostępny? <apex:inputCheckbox Value="{!isAvailable}" /><br />
+data dostępności: <apex:input type="date" html-step="any" Value="{!availableDate}" /><br />
+status: <apex:input type="text" html-step="any" Value="{!status}" /><br />
+czy na część etatu? <apex:inputCheckbox Value="{!partTime}" /><br />
+czy przyjmuje w domu pacjenta? <apex:inputCheckbox Value="{!homeConsult}" /><br /></br>
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+<apex:commandbutton Value="Zapisz" action="{!createNewDoctor}" />
+</apex:form>
+</apex:page>

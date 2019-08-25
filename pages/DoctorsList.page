@@ -1,0 +1,12 @@
+<apex:page controller="DoctorsListController">
+<h1>Doktorzy</h1>
+<apex:form >
+<apex:commandbutton Value="Dodaj nowego doktora" action="{!goToAddNewDoctor}" />
+<ol>
+<apex:repeat value="{!doctors}" var="doctor">
+ <li>{!doctor.name__c} {!doctor.surname__c}&nbsp;<apex:outputLink Value="/apex/DoctorDetails?id={!doctor.id__c}">Szczegóły</apex:outputLink>&nbsp;<apex:outputLink Value="/apex/UpdateDoctor?id={!doctor.id__c}">Modyfikuj</apex:outputLink>&nbsp;<apex:outputLink Value="/apex/DeleteDoctor?id={!doctor.id__c}">Usuń</apex:outputLink>&nbsp;<apex:outputLink Value="/apex/HireDoctor?id={!doctor.id__c}">Zatrudnij</apex:outputLink></li>
+</apex:repeat>
+</ol><br></br>
+<apex:commandbutton Value="Powrót do głównej" action="{!goToMainPage}" />
+</apex:form>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="DoctorDetailsController" docType="html-5.0">
+<h1>Modyfikuj doktora</h1>
+<apex:form >
+id: <apex:inputField type="number" html-step="any" Value="{!doctor.id__c}" /><br />
+imię: <apex:inputField type="text" html-step="any" Value="{!doctor.name__c}" /><br />
+nazwisko: <apex:inputField type="text" html-step="any" Value="{!doctor.surname__c}" /><br/>
+tytuł: <apex:inputField type="text" html-step="any" Value="{!doctor.title__c}" /><br />
+nr licencji: <apex:inputField type="text" html-step="any" Value="{!doctor.licenseNumber__c}" /><br />
+stanowisko: <apex:inputField type="text" html-step="any" Value="{!doctor.position__c}" /><br />
+wydział: <apex:inputField type="text" html-step="any" Value="{!doctor.department__c}" /><br />
+czy kierownik? <apex:inputCheckbox Value="{!doctor.supervisor__c}" /><br>
+tel. służbowy: <apex:inputField type="tel" html-step="any" Value="{!doctor.workPhone__c}" /><br />
+tel. prywatny: <apex:inputField type="tel" html-step="any" Value="{!doctor.privatePhone__c}" /><br />
+email: <apex:inputField type="email" html-step="any" Value="{!doctor.eMail__c}" /><br />
+państwo: <apex:inputField type="text" html-step="any" Value="{!doctor.country__c}" /><br />
+miejscowość: <apex:inputField type="text" html-step="any" Value="{!doctor.town__c}" /><br />
+ulica: <apex:inputField type="text" html-step="any" Value="{!doctor.street__c}" /><br />
+nr domu: <apex:inputField type="number" html-step="any" Value="{!doctor.streetNumber__c}" /><br />
+nr mieszkania: <apex:inputField type="number" html-step="any" Value="{!doctor.houseNumber__c}" /><br />
+kod pocztowy: <apex:inputField type="text" html-step="any" Value="{!doctor.postalCode__c}" /><br />
+czy dostępny? <apex:inputCheckbox Value="{!doctor.isAvailable__c}" /><br />
+data dostępności: <apex:inputField type="date" html-step="any" Value="{!doctor.availableDate__c}" /><br />
+status: <apex:inputField type="text" html-step="any" Value="{!doctor.status__c}" /><br />
+czy na część etatu? <apex:inputCheckbox Value="{!doctor.partTime__c}" /><br />
+czy przyjmuje w domu pacjenta? <apex:inputCheckbox Value="{!doctor.homeConsult__c}" /><br /></br>
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+<apex:commandbutton Value="Zapisz" action="{!updateDoctor}" />
+</apex:form>
+</apex:page>

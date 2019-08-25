@@ -1,0 +1,17 @@
+<apex:page controller="HospitalDetailsController">
+<h1>{!hospital.name__c} </h1><br></br>
+Państwo: {!hospital.country__c}<br></br>
+Miejscowość: {!hospital.town__c}<br></br>
+Ulica: {!hospital.street__c}<br></br>
+Nr domu: {!hospital.streetNumber__c}<br></br>
+tel. 1: {!hospital.phoneNumber1__c}<br></br>
+tel. 2: {!hospital.phoneNumber2__c}<br></br>
+fax 1: {!hospital.faxNumber1__c}<br></br>
+fax 2: {!hospital.faxNumber2__c}<br></br>
+dyrektor: {!hospital.chiefOfMedicine__c}<br></br>
+repozytorium: {!hospital.salesRep__c}<br></br>
+czy szpital kliniczny?: {!hospital.teachingHospital__c}<br></br>
+<apex:form >
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+</apex:form>
+</apex:page>

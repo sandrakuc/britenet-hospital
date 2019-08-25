@@ -1,0 +1,21 @@
+<apex:page controller="AddNewHospitalController" docType="html-5.0">
+<h1>Utwórz nowy szpital</h1>
+<apex:form >
+id: <apex:input type="number" html-step="any" Value="{!id}" /><br />
+nazwa: <apex:input type="text" html-step="any" Value="{!name}" /><br />
+państwo: <apex:input type="text" html-step="any" Value="{!country}" /><br />
+miejscowość: <apex:input type="text" html-step="any" Value="{!town}" /><br />
+ulica: <apex:input type="text" html-step="any" Value="{!street}" /><br />
+nr domu: <apex:input type="number" html-step="any" Value="{!streetNumber}" /><br />
+kod pocztowy: <apex:input type="text" html-step="any" Value="{!postalCode}" /><br />
+tel.1: <apex:input type="tel" html-step="any" Value="{!phoneNumber1}" /><br />
+tel.2: <apex:input type="tel" html-step="any" Value="{!phoneNumber2}" /><br />
+fax 1: <apex:input type="tel" html-step="any" Value="{!faxNumber1}" /><br />
+tex 2: <apex:input type="tel" html-step="any" Value="{!faxNumber2}" /><br />
+dyrektor: <apex:input type="text" html-step="any" Value="{!chiefOfMedicine}" /><br />
+repozytorium: <apex:input type="text" html-step="any" Value="{!salesRep}" /><br />
+czy szpital kliniczny? <apex:inputCheckbox Value="{!teachingHospital}" /><br />
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+<apex:commandbutton Value="Zapisz" action="{!createNewHospital}" />
+</apex:form>
+</apex:page>

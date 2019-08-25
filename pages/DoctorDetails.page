@@ -1,0 +1,24 @@
+<apex:page controller="DoctorDetailsController">
+<h1>{!doctor.name__c} {!doctor.surname__c} </h1><br></br>
+Tytuł: {!doctor.title__c} <br></br>
+Nr licencji: {!doctor.licenseNumber__c} <br></br>
+Stanowisko: {!doctor.position__c}<br></br>
+Wydział: {!doctor.department__c}<br></br>
+Czy kierownik? {!doctor.supervisor__c}<br></br>
+Telefon służbowy: {!doctor.workPhone__c}<br></br>
+Telefon prywatny: {!doctor.privatePhone__c}<br></br>
+Email: {!doctor.email__c}<br></br>
+Państwo: {!doctor.country__c}<br></br>
+Miejscowość: {!doctor.town__c}<br></br>
+Ulica: {!doctor.street__c}<br></br>
+Nr domu: {!doctor.streetNumber__c}<br></br>
+Nr mieszkania: {!doctor.houseNumber__c}<br></br>
+Czy dostępny? {!doctor.isAvailable__c}<br></br>
+Data dostępności: {!doctor.availableDate__c}<br></br>
+Status: {!doctor.status__c}<br></br>
+Czy na część etatu? {!doctor.partTime__c}<br></br>
+Czy przyjmuje w domu pacjenta? {!doctor.homeConsult__c}<br></br>
+<apex:form >
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+</apex:form>
+</apex:page>

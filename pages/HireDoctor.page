@@ -1,0 +1,9 @@
+<apex:page controller="HireDoctorController" docType="html-5.0">
+<h1>Zatrudnij doktora!</h1> 
+<apex:form >
+<apex:inputText Value="{!hospitalName}" /><br></br>
+nowe id zatrudnienia: <apex:input type="number" html-step="any" Value="{!hosdocId}" /><br />
+<apex:commandbutton Value="Powrót" action="{!goBack}" />
+<apex:commandbutton Value="Zatrudnij" action="{!hire}" />
+</apex:form> 
+</apex:page>

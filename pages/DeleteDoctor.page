@@ -1,0 +1,8 @@
+<apex:page controller="DeleteDoctorController">
+<h1>Czy usunąć doktora?!</h1>
+Czy chcesz usunąć doktora o numerze id: {!docId}? <br></br>
+<apex:form >
+<apex:commandbutton Value="Nie" action="{!goBack}"  />
+<apex:commandbutton Value="Tak" action="{!deleteDoctor}"  />
+</apex:form>
+</apex:page>

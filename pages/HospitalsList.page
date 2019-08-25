@@ -1,0 +1,12 @@
+<apex:page controller="HospitalsListController" docType="html-5.0">
+<h1>Szpitale</h1>
+<apex:form >
+<apex:commandbutton Value="Dodaj nowy szpital" action="{!goToAddNewHospital}" />
+<ol>
+<apex:repeat value="{!hospitals}" var="hospital">
+ <li>{!hospital.name__c}&nbsp;<apex:outputLink Value="/apex/HospitalDetails?id={!hospital.id__c}">Szczegóły</apex:outputLink>&nbsp;<apex:outputLink Value="/apex/UpdateHospital?id={!hospital.id__c}">Modyfikuj</apex:outputLink>&nbsp;<apex:outputLink Value="/apex/DeleteHospital?id={!hospital.id__c}">Usuń</apex:outputLink></li>
+</apex:repeat>
+</ol><br></br>
+<apex:commandbutton Value="Powrót do głównej" action="{!goToMainPage}" />
+</apex:form>
+</apex:page>
